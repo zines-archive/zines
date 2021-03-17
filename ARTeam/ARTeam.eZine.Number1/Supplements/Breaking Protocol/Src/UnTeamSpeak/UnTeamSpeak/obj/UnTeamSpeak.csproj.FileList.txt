@@ -1,0 +1,10 @@
+bin\Release\UnTeamSpeak.exe
+bin\Release\UnTeamSpeak.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\UnTeamSpeak.exe
+obj\Release\UnTeamSpeak.pdb
+bin\Debug\UnTeamSpeak.exe
+bin\Debug\UnTeamSpeak.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\UnTeamSpeak.exe
+obj\Debug\UnTeamSpeak.pdb

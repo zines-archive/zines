@@ -1,0 +1,320 @@
+;(c) EliCZ 2000-1
+
+iWin32		MACRO	Win32API,p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19
+                IRP	pxx,<p19,p18,p17,p16,p15,p14,p13,p12,p11,p10,p09,p08,p07,p06,p05,p04,p03,p02,p01,p00>
+                 IFNB  <pxx>
+                 PUSHD  pxx
+		 ENDIF
+		ENDM
+     	        EXTERN	C _imp__&Win32API:DWORD
+		CALL	_imp__&Win32API
+		ENDM
+
+iWin32@		MACRO	Win32API,p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19
+                npar =  0
+                IRP	pxx,<p19,p18,p17,p16,p15,p14,p13,p12,p11,p10,p09,p08,p07,p06,p05,p04,p03,p02,p01,p00>
+                 IFNB  <pxx>
+                 PUSHD  pxx
+                npar =  npar + 4
+		 ENDIF
+		ENDM
+                IF      npar EQ  0 
+                        EXTERN   C _imp__&Win32API&@0:DWORD
+		        CALL	 _imp__&Win32API&@0
+                ELSEIF  npar EQ  4 
+                        EXTERN   C _imp__&Win32API&@4:DWORD
+		        CALL	 _imp__&Win32API&@4
+                ELSEIF  npar EQ  8 
+                        EXTERN   C _imp__&Win32API&@8:DWORD
+		        CALL	 _imp__&Win32API&@8
+                ELSEIF  npar EQ  12 
+                        EXTERN   C _imp__&Win32API&@12:DWORD
+		        CALL	 _imp__&Win32API&@12
+                ELSEIF  npar EQ  16 
+                        EXTERN   C _imp__&Win32API&@16:DWORD
+		        CALL	 _imp__&Win32API&@16
+                ELSEIF  npar EQ  20 
+                        EXTERN   C _imp__&Win32API&@20:DWORD
+		        CALL	 _imp__&Win32API&@20
+                ELSEIF  npar EQ  24 
+                        EXTERN   C _imp__&Win32API&@24:DWORD
+		        CALL	 _imp__&Win32API&@24
+                ELSEIF  npar EQ  28 
+                        EXTERN   C _imp__&Win32API&@28:DWORD
+		        CALL	 _imp__&Win32API&@28
+                ELSEIF  npar EQ  32 
+                        EXTERN   C _imp__&Win32API&@32:DWORD
+		        CALL	 _imp__&Win32API&@32
+                ELSEIF  npar EQ  36 
+                        EXTERN   C _imp__&Win32API&@36:DWORD
+		        CALL	 _imp__&Win32API&@36
+                ELSEIF  npar EQ  40 
+                        EXTERN   C _imp__&Win32API&@40:DWORD
+		        CALL	 _imp__&Win32API&@40
+                ELSEIF  npar EQ  44 
+                        EXTERN   C _imp__&Win32API&@44:DWORD
+		        CALL	 _imp__&Win32API&@44
+                ELSEIF  npar EQ  48 
+                        EXTERN   C _imp__&Win32API&@48:DWORD
+		        CALL	 _imp__&Win32API&@48
+                ELSEIF  npar EQ  52 
+                        EXTERN   C _imp__&Win32API&@52:DWORD
+		        CALL	 _imp__&Win32API&@52
+                ELSEIF  npar EQ  56 
+                        EXTERN   C _imp__&Win32API&@56:DWORD
+		        CALL	 _imp__&Win32API&@56
+                ELSEIF  npar EQ  60 
+                        EXTERN   C _imp__&Win32API&@60:DWORD
+		        CALL	 _imp__&Win32API&@60
+                ELSEIF  npar EQ  64 
+                        EXTERN   C _imp__&Win32API&@64:DWORD
+		        CALL	 _imp__&Win32API&@64
+                ELSEIF  npar EQ  68 
+                        EXTERN   C _imp__&Win32API&@68:DWORD
+		        CALL	 _imp__&Win32API&@68
+                ELSEIF  npar EQ  72 
+                        EXTERN   C _imp__&Win32API&@72:DWORD
+		        CALL	 _imp__&Win32API&@72
+                ENDIF
+		ENDM
+
+
+icWin32		MACRO	Win32API,p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19
+                npar =  0
+                IRP	pxx,<p19,p18,p17,p16,p15,p14,p13,p12,p11,p10,p09,p08,p07,p06,p05,p04,p03,p02,p01,p00>
+                 IFNB  <pxx>
+                 PUSHD  pxx
+                npar =  npar + 4
+		 ENDIF
+		ENDM
+     	        EXTERN	C _imp__&Win32API:DWORD
+		CALL	_imp__&Win32API
+                ADD     ESP, npar
+		ENDM
+
+
+icWin32@	MACRO	Win32API,p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19
+                npar =  0
+                IRP	pxx,<p19,p18,p17,p16,p15,p14,p13,p12,p11,p10,p09,p08,p07,p06,p05,p04,p03,p02,p01,p00>
+                 IFNB  <pxx>
+                 PUSHD  pxx
+                npar =  npar + 4
+		 ENDIF
+		ENDM
+                IF      npar EQ  0 
+                        EXTERN   C _imp__&Win32API&@0:DWORD
+		        CALL	 _imp__&Win32API&@0
+                ELSEIF  npar EQ  4 
+                        EXTERN   C _imp__&Win32API&@4:DWORD
+		        CALL	 _imp__&Win32API&@4
+                ELSEIF  npar EQ  8 
+                        EXTERN   C _imp__&Win32API&@8:DWORD
+		        CALL	 _imp__&Win32API&@8
+                ELSEIF  npar EQ  12 
+                        EXTERN   C _imp__&Win32API&@12:DWORD
+		        CALL	 _imp__&Win32API&@12
+                ELSEIF  npar EQ  16 
+                        EXTERN   C _imp__&Win32API&@16:DWORD
+		        CALL	 _imp__&Win32API&@16
+                ELSEIF  npar EQ  20 
+                        EXTERN   C _imp__&Win32API&@20:DWORD
+		        CALL	 _imp__&Win32API&@20
+                ELSEIF  npar EQ  24 
+                        EXTERN   C _imp__&Win32API&@24:DWORD
+		        CALL	 _imp__&Win32API&@24
+                ELSEIF  npar EQ  28 
+                        EXTERN   C _imp__&Win32API&@28:DWORD
+		        CALL	 _imp__&Win32API&@28
+                ELSEIF  npar EQ  32 
+                        EXTERN   C _imp__&Win32API&@32:DWORD
+		        CALL	 _imp__&Win32API&@32
+                ELSEIF  npar EQ  36 
+                        EXTERN   C _imp__&Win32API&@36:DWORD
+		        CALL	 _imp__&Win32API&@36
+                ELSEIF  npar EQ  40 
+                        EXTERN   C _imp__&Win32API&@40:DWORD
+		        CALL	 _imp__&Win32API&@40
+                ELSEIF  npar EQ  44 
+                        EXTERN   C _imp__&Win32API&@44:DWORD
+		        CALL	 _imp__&Win32API&@44
+                ELSEIF  npar EQ  48 
+                        EXTERN   C _imp__&Win32API&@48:DWORD
+		        CALL	 _imp__&Win32API&@48
+                ELSEIF  npar EQ  52 
+                        EXTERN   C _imp__&Win32API&@52:DWORD
+		        CALL	 _imp__&Win32API&@52
+                ELSEIF  npar EQ  56 
+                        EXTERN   C _imp__&Win32API&@56:DWORD
+		        CALL	 _imp__&Win32API&@56
+                ELSEIF  npar EQ  60 
+                        EXTERN   C _imp__&Win32API&@60:DWORD
+		        CALL	 _imp__&Win32API&@60
+                ELSEIF  npar EQ  64 
+                        EXTERN   C _imp__&Win32API&@64:DWORD
+		        CALL	 _imp__&Win32API&@64
+                ELSEIF  npar EQ  68 
+                        EXTERN   C _imp__&Win32API&@68:DWORD
+		        CALL	 _imp__&Win32API&@68
+                ELSEIF  npar EQ  72 
+                        EXTERN   C _imp__&Win32API&@72:DWORD
+		        CALL	 _imp__&Win32API&@72
+                ENDIF
+                        ADD      ESP, npar
+		ENDM
+
+
+iWin32j		MACRO	Win32API,p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19
+                IRP	pxx,<p19,p18,p17,p16,p15,p14,p13,p12,p11,p10,p09,p08,p07,p06,p05,p04,p03,p02,p01,p00>
+                 IFNB  <pxx>
+                 PUSHD  pxx
+		 ENDIF
+		ENDM
+     	        EXTERN	C _imp__&Win32API:DWORD
+		JMP	_imp__&Win32API
+		ENDM
+
+
+iEXTERN         MACRO   Win32API
+                EXTERN  C _imp__&Win32API :DWORD
+                Win32API EQU _imp__&Win32API
+                ENDM  
+
+
+iDWORD          MACRO   Win32API
+                EXTERN  C _imp__&Win32API :DWORD
+                DWORD   _imp__&Win32API
+                ENDM  
+
+
+iLEA            MACRO   R32, Win32API
+                EXTERN  C _imp__&Win32API :DWORD
+                MOV     R32, OFFSET _imp__&Win32API
+                ENDM  
+
+
+iMOV            MACRO   R32, Win32API
+                EXTERN  C _imp__&Win32API :DWORD
+                MOV     R32, _imp__&Win32API
+                ENDM  
+
+
+iCMP            MACRO   R32, Win32API
+                EXTERN  C _imp__&Win32API :DWORD
+                CMP     R32, _imp__&Win32API
+                ENDM  
+
+
+iMOVw           MACRO   Win32API, R32
+                EXTERN  C _imp__&Win32API :DWORD
+                MOV     _imp__&Win32API, R32
+                ENDM  
+
+
+iPUSHo          MACRO   Win32API
+                EXTERN  C _imp__&Win32API :DWORD
+                PUSH    OFFSET _imp__&Win32API
+                ENDM 
+
+
+iPUSH           MACRO   Win32API
+                EXTERN  C _imp__&Win32API :DWORD
+                PUSH    _imp__&Win32API
+                ENDM 
+ 
+
+iPOP            MACRO   Win32API
+                EXTERN  C _imp__&Win32API :DWORD
+                POP     _imp__&Win32API
+                ENDM 
+
+
+iGet0ImpDesc    MACRO   R32
+                EXTERN  PASCAL __NULL_IMPORT_DESCRIPTOR :DWORD
+                MOV     R32, __NULL_IMPORT_DESCRIPTOR
+                ENDM
+
+iSet0ImpDesc    MACRO   R32
+                EXTERN  PASCAL __NULL_IMPORT_DESCRIPTOR :DWORD
+                MOV     __NULL_IMPORT_DESCRIPTOR, R32
+                ENDM
+
+
+iGetDllImpDesc  MACRO   R32, _exedllsys
+                EXTERN  PASCAL __IMPORT_DESCRIPTOR_&_exedllsys :DWORD
+                MOV     R32, __IMPORT_DESCRIPTOR_&_exedllsys
+                ENDM
+
+iSetDllImpDesc  MACRO   _exedllsys, R32
+                EXTERN  PASCAL __IMPORT_DESCRIPTOR_&_exedllsys :DWORD
+                MOV     __IMPORT_DESCRIPTOR_&_exedllsys, R32
+                ENDM
+
+COMMENT $
+
+iGetDll0ThunkData  MACRO   R32, _exedllsys
+                EXTERN  PASCAL _exedllsys&_NULL_THUNK_DATA :DWORD
+                MOV     R32, _exedllsys&_NULL_THUNK_DATA
+                ENDM
+
+iSetDll0ThunkData  MACRO   _exedllsys, R32
+                EXTERN  PASCAL _exedllsys&_NULL_THUNK_DATA :DWORD
+                MOV     _exedllsys&_NULL_THUNK_DATA, R32
+                ENDM
+        $
+
+
+
+lPUSH		macro	p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19
+		irp	pxx,<p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19>
+		ifnb	<pxx>
+		pushD	pxx
+		endif
+                endm
+		endm
+
+lPOP		macro	p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19
+		irp	pxx,<p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19>
+		ifnb	<pxx>
+		popD	pxx
+		endif
+                endm
+		endm
+
+;following macros I added into W32Main.inc already!
+
+cWin32		macro	label,p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19
+                npar =  0
+		irp	pxx,<p19,p18,p17,p16,p15,p14,p13,p12,p11,p10,p09,p08,p07,p06,p05,p04,p03,p02,p01,p00>
+		ifnb	<pxx>
+		pushD	pxx
+                npar =  npar + 4
+		endif
+		endm
+		CALL    label
+                ADD     ESP, npar
+                endm
+
+sWin32		macro	label,p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19
+		irp	pxx,<p19,p18,p17,p16,p15,p14,p13,p12,p11,p10,p09,p08,p07,p06,p05,p04,p03,p02,p01,p00>
+		ifnb	<pxx>
+		pushD	pxx
+		endif
+		endm
+		CALL    label
+                endm
+
+PUSHL		macro	p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19
+		irp	pxx,<p19,p18,p17,p16,p15,p14,p13,p12,p11,p10,p09,p08,p07,p06,p05,p04,p03,p02,p01,p00>
+		ifnb	<pxx>
+		pushD	pxx
+		endif
+                endm
+		endm
+
+POPL		macro	p00,p01,p02,p03,p04,p05,p06,p07,p08,p09,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19
+		irp	pxx,<p19,p18,p17,p16,p15,p14,p13,p12,p11,p10,p09,p08,p07,p06,p05,p04,p03,p02,p01,p00>
+		ifnb	<pxx>
+		popD	pxx
+		endif
+                endm
+		endm

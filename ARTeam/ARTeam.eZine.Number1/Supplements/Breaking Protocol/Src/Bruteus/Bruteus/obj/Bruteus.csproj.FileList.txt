@@ -1,0 +1,10 @@
+bin\Release\Bruteus.exe
+bin\Release\Bruteus.pdb
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Bruteus.exe
+obj\Release\Bruteus.pdb
+bin\Debug\Bruteus.exe
+bin\Debug\Bruteus.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Bruteus.exe
+obj\Debug\Bruteus.pdb

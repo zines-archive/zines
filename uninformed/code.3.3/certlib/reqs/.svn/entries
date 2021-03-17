@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="16"
+   name=""
+   committed-date="2005-11-22T14:56:34.089670Z"
+   url="svn://127.0.0.1/srv/svn/repositories/random/certlib/reqs"
+   last-author="xbud"
+   kind="dir"
+   revision="16"/>
+<entry
+   committed-rev="16"
+   name="req2.DER"
+   text-time="2005-11-18T18:08:39.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="61c6dcd04869fd4e6d8e5a475dd44e38"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:56:34.000000Z"/>
+<entry
+   committed-rev="16"
+   name="req3.DER"
+   text-time="2005-11-18T18:08:39.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="628c4629513b525fb2875e79b97f0450"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:56:34.000000Z"/>
+<entry
+   committed-rev="16"
+   name="req4.DER"
+   text-time="2005-11-18T18:08:39.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="5819acfca2cfcabe73f8079bb21ba395"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:56:34.000000Z"/>
+<entry
+   committed-rev="16"
+   name="req5.DER"
+   text-time="2005-11-18T18:08:39.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="c681bdb0a0e0eca8a382aa55b1fb19af"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:56:34.000000Z"/>
+<entry
+   committed-rev="16"
+   name="compiler"
+   text-time="2005-11-18T19:17:20.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="ff1b9f2542d32ff44d75330205eb492f"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:56:34.000000Z"/>
+<entry
+   committed-rev="16"
+   name="certsdb.dat"
+   text-time="2005-11-18T19:17:43.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="54f2771fad337f1e51f65a7e36efa382"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:56:34.000000Z"/>
+</wc-entries>

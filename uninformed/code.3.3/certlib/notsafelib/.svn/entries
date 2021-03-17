@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="16"
+   name=""
+   committed-date="2005-11-22T14:56:34.089670Z"
+   url="svn://127.0.0.1/srv/svn/repositories/random/certlib/notsafelib"
+   last-author="xbud"
+   kind="dir"
+   revision="16"/>
+<entry
+   committed-rev="16"
+   name="certdb2der.c"
+   text-time="2005-11-21T20:58:26.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="b7ed514ab63a50fd840f6c6fb9d76647"
+   last-author="xbud"
+   kind="file"/>
+<entry
+   committed-rev="16"
+   name="certlib.c"
+   text-time="2005-11-18T18:05:51.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="3d006c93548d283f1db07aa87b2bee8a"
+   last-author="xbud"
+   kind="file"/>
+<entry
+   committed-rev="16"
+   name="exploit.c"
+   text-time="2005-11-21T20:39:47.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="d6ba29386089097b93d6709bab2a226c"
+   last-author="xbud"
+   kind="file"/>
+<entry
+   committed-rev="16"
+   name="certextract.c"
+   text-time="2005-11-18T16:14:29.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="e78d3bd639b2fb247311677a769ebafb"
+   last-author="xbud"
+   kind="file"/>
+<entry
+   committed-rev="16"
+   name="certparse.c"
+   text-time="2005-11-17T07:41:22.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="a83006c9372e05f25a0e45be9498f674"
+   last-author="xbud"
+   kind="file"/>
+<entry
+   committed-rev="16"
+   name="certlib.h"
+   text-time="2005-11-18T18:20:53.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="2bcb6d41b1a5e8dc169b3657e2c67cef"
+   last-author="xbud"
+   kind="file"/>
+<entry
+   committed-rev="16"
+   name="compiler.c"
+   text-time="2005-11-18T19:17:20.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="abfc49a983f1d83a4d768fb62905d4da"
+   last-author="xbud"
+   kind="file"/>
+</wc-entries>

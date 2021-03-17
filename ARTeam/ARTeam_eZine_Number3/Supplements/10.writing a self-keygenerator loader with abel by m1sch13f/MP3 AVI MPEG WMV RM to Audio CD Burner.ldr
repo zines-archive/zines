@@ -1,0 +1,50 @@
+*ABEL* Loader Generator data v2.31 by c0rdat^ ind.
+
+[common_data]
+target_program_filename;MP3 AVI MPEG WMV RM to Audio CD Burner.exe
+exe_filename_to_generate;MP3 AVI MPEG WMV RM to Audio CD Burner Loader.exe
+detection_method;0
+window_caption_or_class_name;
+hide_trigger_window;FALSE
+kill_trigger_window;FALSE
+get_PID_from_window_handle;FALSE
+info_caption;Loader created by:
+author_name;M1sCh13F
+author_mail_or_www;
+load_timeout;5
+patch_delay;0
+transparent_icon_color;FF00FF
+
+[flags]
+priority_boost;FALSE
+auto_learn_enabled;FALSE
+ignore_memory_errors;FALSE
+show_splash_screen;FALSE
+create_debug_file;FALSE
+find_child_process;FALSE
+
+[file_cleaning]
+file_cleaning_enabled;FALSE
+
+[reg_cleaning]
+reg_cleaning_enabled;FALSE
+
+[date_faker]
+date_faker_enabled;FALSE
+date_faker_date;2003;1;1
+date_faker_time;0;0;0
+date_faker_period;10
+date_faker_increment;-1
+
+[installer]
+include_installer;FALSE
+install_dialog_caption;Simple installer by c0rdat ^ind.
+[install_dialog_begin]
+
+[install_dialog_end]
+
+
+[patch_data_1]
+004066D5;0;6A,40,68,0C,A5,41,00,68,E4,A4,41,00,8B,CB,C7,05,A4,AE,41,00,00,00,00,00,E8,34,AD,00,00,5E,5B,81,C4,C0,02,00,00;A1,20,AC,13,00,A3,E0,AB,13,00,A1,24,AC,13,00,A3,E4,AB,13,00,C6,05,E8,AB,13,00,00,33,C0,E9,FF,FE,FF,FF,90,90,90
+before_resume;TRUE
+before_window;FALSE

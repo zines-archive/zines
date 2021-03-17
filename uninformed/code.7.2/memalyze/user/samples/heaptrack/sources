@@ -1,0 +1,10 @@
+TARGETNAME=heaptrack
+TARGETPATH=.
+TARGETTYPE=DYNLINK
+TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib \
+  ..\..\dll\i386\memalyze.lib
+UMTYPE=console
+C_DEFINES=$(C_DEFINES)
+USE_MAPSYM=1
+USE_MSVCRT=1
+SOURCES=heaptrack.c

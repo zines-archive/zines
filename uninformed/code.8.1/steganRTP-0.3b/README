@@ -1,0 +1,266 @@
+                            SteganRTP
+
+SteganRTP is a steganographic communications tool used to create a covert
+channel using an Real-time Transport Protocol session to convey it's message'
+to another instance of SteganRTP utilizing the same RTP session.
+
+
+INSTALLATION
+------------
+
+This source distribution requires libfindrtp.  libfindrtp is a C library
+which provides functions used to identify an RTP session from VoIP
+signaling traffic.  You can obtain the most recent version of libfindrtp
+from the following location:
+
+	http://sourceforge.net/projects/libfindrtp/
+
+Download and install libfindrtp.
+
+Make sure you have the most recent version of SteganRTP.  You should always
+be able to obtain this from the following location:
+
+	http://sourceforge.net/projects/steganrtp/
+
+Uncompress the source package, change directory into the directory it
+creates, review the Makefile for your system, then execute "make".
+
+
+OPERATION
+---------
+
+Overview of Operation:
+
+SteganRTP works by utilizing an RTP session's audio data as cover-medium
+within which to embed it's communications protocol.  The RTP session in
+question may or may not be terminated on the same host as both or either
+instances of SteganRTP.  Generally, all SteganRTP needs to know is which
+endpoint host of the RTP session it will be utilizing is the "close" end
+and the "remote" end, which determines which direction of the RTP packet
+stream is to be embedded into and which is to be extracted from.
+
+The local instance of SteganRTP must be nearer or on the same host as the
+"close" endpoint and the remote instance must be nearer or on the same
+host as the "remote" endpoint:
+
+.-Host-A--.   .-Local-Host-.    _,--._    .-Remote-Host-.   .-Host-B--.
+| Phone-A |---| SteganRTP  |---( Netz )---| SteganRTP   |---| Phone-B |
+`---------'   `------------'   `------'   `-------------'   `---------'
+
+                                  (or)
+
+                                .-----.
+      .------Host-A-----.      (       \       .------Host-B------.
+      |   SoftPhone-A   |    .-'`       `-.    |    SoftPhone-B   |
+      |                 |---/  InternetZ   \---|                  |
+      | SteganRTP-local |  (     Cloud     /   | SteganRTP-remote |
+      `-----------------'   `-------------'    `------------------'
+
+Once an RTP stream meeting the supplied parameters is identified, it is
+hooked for utilization and a session begins.
+
+Note, SteganRTP uses libfindrtp to identify usable RTP sessions based
+on the supplied parameters.  libfindrtp accomplishes this by monitoring
+VoIP signaling for the negotiation of RTP endpoint hosts and ports.
+Thus, SteganRTP must be waiting for a call to be set-up prior to being
+able to utilize it via this auto-detection of sessions.  An RTP session
+that is already in progress can be used, however all parameters
+describing the session must be specified on the command-line since there
+is no VoIP signaling available to detect the RTP session from.  See the
+examples below for further details.
+
+
+USAGE
+-----
+
+Usage: steganrtp [general options] -t <host> -k <keyphrase>
+  required options:
+    at least one of:
+      -a <host>       The "source" of the RTP session, or, host treated as the "close" endpoint (host A)
+      -b <host>       The "destination" of the RTP session, or, host treated as the "remote" endpoint (host B)
+    -k <keyphrase>  Shared secret used as a key to obfuscate communications
+  general options:
+    -c <port>       Host A's RTP port
+    -d <port>       Host B's RTP port
+    -i <interface>  Interface device (defaults to eth0)
+    -s              Enable the shell service (DANGEROUS)
+    -v              Increase verbosity (repeat for additional verbosity)
+  help and documentation:
+    -V              Print version information and exit
+    -e              Show usage examples and exit
+    -h              Print help message and exit
+
+
+Command-line Arguments in detail:
+
+	-a <host>
+
+<host> is the name or IP address of the closest side of the RTP session
+desired to be utilized as cover-medium (Host A).
+
+	-b <host>
+
+<host> is the name or IP address of the remote size of the RTP session
+desired to be utilized as cover-medium (Host B).
+
+	-k <keyphrase>
+
+<keyphrase> is a shared secret between the users of the two SteganRTP
+instances which will be communicating.  In some cases, a single user may
+be running both instances.  The keyphrase is used to generate a bit-pad
+via the SHA-1 hash function which will later be used to obfuscate the
+data being steganographically embedded into the RTP audio cover-data.
+
+	-c <port>
+
+<port> is the RTP port used by Host A.
+
+	-d <port>
+
+<port> is the RTP port used by Host B.
+
+	-i <interface>
+
+<interface> is the interface to use on the local host.  This parameter
+defaults to "eth0".
+
+	-s
+
+This argument enables the command shell service.  If the command shell
+service is enabled, the user of the remote instance of SteganRTP will
+be able to execute commands on the local system as the user running
+SteganRTP.  You likely don't want this unless you are the user running
+both instances of SteganRTP and intend to use the remote instance as
+an interface for a remote shell on that host.  This feature can be
+useful for remote administration of a system without direct access to
+the system, assuming that RTP is allowed to traverse traffic policy
+enforcement points.
+
+	-v
+
+This argument increases the verbosity level.  Repeat for higher levels
+of verbosity.
+
+	-V
+
+This argument prints SteganRTP's version information and exits.
+
+	-e
+
+This argument prints a quick examples reference.
+
+	-h
+
+This argument prints the usage (help) information and exits.
+
+
+Usage Examples:
+
+You can print a quick reference of the following examples from the
+SteganRTP command-line by using the -e command-line argument.
+
+The simplest command-line you can execute to successfully run SteganRTP
+is:
+
+	steganrtp -k <keyphrase> -b <host>
+
+This will begin a session utilizing any RTP session involving <host-b>
+as the destination endpoint.
+
+	steganrtp -k <keyphrase> -a <host-a> -b <host-b> -i <interface>
+
+This will begin a session utilizing any RTP session between <host-a> and
+<host-b> using interface <interface>
+
+	steganrtp -k <keyphrase> -a <host-a> -b <host-b> -i <interface> -s
+
+This is the same as the previous example but will enable the command
+shell service:
+
+	steganrtp -k <keyphrase> -a <host-a> -b <host-b> -c <a-port> -d <b-port>
+
+This will begin a session utilizing a specific RTP session between
+<host-a> on port <a-port> and <host-b> on <b-port>.  Note, this will
+effectively disable RTP session auto-identification and will attempt
+to use an RTP session as described whether it exists or not.  This is
+useful for when an RTP session that is desirable for utilization is
+already in progress as the other examples rely on libfindrtp to
+identify the RTP session as it is being set up by VoIP signaling and
+thus must be waiting for the call-setup.
+
+
+USER INTERFACE
+--------------
+
+SteganRTP employs a curses interface featuring four windows; the 
+Command window at the bottom of the screen, the large Main window
+in the middle of the screen, and the Input and Output Status windows
+at the top of the screen.
+
+Command window:
+
+All keyboard input, if accepted, is displayed in the Command window.
+Lines of input that are not prefixed with a slash ('/') character
+are treated as chat text and are sent to the remote instance of
+SteganRTP as such.  Lines of input that begin with a slash are
+considered commands and are processed by the local instance of
+SteganRTP.
+
+Main window:
+
+When in Chat mode, chat text and general SteganRTP information
+messages and events are displayed in the Main window.  When in shell
+mode, this window is overloaded with the input to and output of the
+shell service provided by the remote instance of SteganRTP.
+
+Input Status window:
+
+Events related to incoming RTP packets or SteganRTP communication
+messages are displayed in the Input Status window.
+
+Output Status window:
+
+Events related to output RTP packets or SteganRTP communication
+messages are displayed in the Output Status window.
+
+Commands:
+
+The following commands can be executed from within the Command window:
+
+	/chat
+
+The "chat" command puts the interface into Chat Mode.
+
+	/sendfile <filename>
+
+The "sendfile" command queues a file for transmission to the remote
+instance of SteganRTP.  <filename> is the path location and filename
+of the local file to be sent.
+
+	/shell
+
+The "shell" command puts the interface into Shell Mode.
+
+	/quit
+	/exit
+
+The "quit" and "exit" commands exit the program.
+
+	/help
+	/?
+
+The "help" and "?" commands print an available command list.
+
+
+CONTACT
+-------
+
+For bugs, feature requests, patch submissions, etc., please use the
+SourceForge project tools at:
+
+	http://sourceforge.net/projects/steganrtp/
+
+Please direct everything else to:
+
+	I)ruid <druid@caughq.org>
+

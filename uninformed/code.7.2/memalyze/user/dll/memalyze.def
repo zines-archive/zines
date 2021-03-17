@@ -1,0 +1,22 @@
+LIBRARY memalyze.dll
+EXPORTS
+;
+; mirroring exports
+;
+	_CreateMemoryMonitor@20
+	_RegisterMemoryMonitorCallback@12
+	_DestroyMemoryMonitor@4
+	_ReferenceMemoryMonitor@4
+	_DereferenceMemoryMonitor@4
+
+;
+; disassembly exports
+;
+	_GetInstructionString@12
+
+;
+; memory management
+;
+	_IsMemoryMonitorHeap@4
+	_MonitorAllocateMemory@4
+	_MonitorFreeMemory@4

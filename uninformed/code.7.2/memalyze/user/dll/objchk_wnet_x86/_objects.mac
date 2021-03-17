@@ -1,0 +1,42 @@
+MUI_386_OBJECTS=
+
+386_OBJECTS= \
+    $(_OBJ_DIR)\i386\alloc.obj \
+    $(_OBJ_DIR)\i386\entry.obj \
+    $(_OBJ_DIR)\i386\libdasm.obj \
+    $(_OBJ_DIR)\i386\mirror.obj \
+    $(_OBJ_DIR)\i386\monitor.obj \
+    $(_OBJ_DIR)\i386\segment.obj
+
+MUI_IA64_OBJECTS=
+
+IA64_OBJECTS= \
+    $(_OBJ_DIR)\ia64\alloc.obj \
+    $(_OBJ_DIR)\ia64\entry.obj \
+    $(_OBJ_DIR)\ia64\libdasm.obj \
+    $(_OBJ_DIR)\ia64\mirror.obj \
+    $(_OBJ_DIR)\ia64\monitor.obj \
+    $(_OBJ_DIR)\ia64\segment.obj
+
+MUI_AMD64_OBJECTS=
+
+AMD64_OBJECTS= \
+    $(_OBJ_DIR)\amd64\alloc.obj \
+    $(_OBJ_DIR)\amd64\entry.obj \
+    $(_OBJ_DIR)\amd64\libdasm.obj \
+    $(_OBJ_DIR)\amd64\mirror.obj \
+    $(_OBJ_DIR)\amd64\monitor.obj \
+    $(_OBJ_DIR)\amd64\segment.obj
+
+MUI_ARM_OBJECTS=
+
+ARM_OBJECTS= \
+    $(_OBJ_DIR)\arm\alloc.obj \
+    $(_OBJ_DIR)\arm\entry.obj \
+    $(_OBJ_DIR)\arm\libdasm.obj \
+    $(_OBJ_DIR)\arm\mirror.obj \
+    $(_OBJ_DIR)\arm\monitor.obj \
+    $(_OBJ_DIR)\arm\segment.obj
+
+PRECOMPILED_INCLUDE_BASENAME=precomp.h
+

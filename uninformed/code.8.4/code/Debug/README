@@ -1,0 +1,10 @@
+These are the debug tools from the madwifi project (http://www.madwifi.org).
+The have been modified to work with OSX. To build them it should be as simple
+as (sorry, no makefiles yet):
+gcc -D__osx__ 80211debug.c -o 80211debug
+gcc -D__osx__ athdebug.c -o athdebug
+
+Running them should be as easy as:
+./80211debug +scan
+
+They need root privs to set the debug values. 

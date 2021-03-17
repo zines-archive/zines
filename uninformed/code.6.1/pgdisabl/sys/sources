@@ -1,0 +1,9 @@
+TARGETNAME=pgdisabl
+TARGETTYPE=DRIVER
+
+SOURCES=pgdisabl.c \
+        pgsubvrt.c \
+        asmfuncs.asm \
+        pgdisabl.rc
+
+USER_C_FLAGS = $(USER_C_FLAGS) /WX

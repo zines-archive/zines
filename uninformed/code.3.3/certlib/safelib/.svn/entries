@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="16"
+   name=""
+   committed-date="2005-11-22T14:56:34.089670Z"
+   url="svn://127.0.0.1/srv/svn/repositories/random/certlib/safelib"
+   last-author="xbud"
+   kind="dir"
+   revision="16"/>
+<entry
+   committed-rev="16"
+   name="certdb2der.c"
+   text-time="2005-11-22T22:38:22.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="2e57d258e89eee4139b19da924c17ef0"
+   last-author="xbud"
+   kind="file"/>
+<entry
+   committed-rev="16"
+   name="certlib.c"
+   text-time="2005-11-22T22:54:57.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="fa5a3872436281f47dd8796186251113"
+   last-author="xbud"
+   kind="file"/>
+<entry
+   committed-rev="16"
+   name="certextract.c"
+   text-time="2005-11-22T22:05:52.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="9c0ebae8754d6aea01eba3e838462173"
+   last-author="xbud"
+   kind="file"/>
+<entry
+   committed-rev="16"
+   name="certlib.h"
+   text-time="2005-11-22T22:00:21.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="2bcb6d41b1a5e8dc169b3657e2c67cef"
+   last-author="xbud"
+   kind="file"/>
+</wc-entries>

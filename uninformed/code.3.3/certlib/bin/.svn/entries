@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="15"
+   name=""
+   committed-date="2005-11-22T14:55:23.328389Z"
+   url="svn://127.0.0.1/srv/svn/repositories/random/certlib/bin"
+   last-author="xbud"
+   kind="dir"
+   revision="15"/>
+<entry
+   committed-rev="15"
+   name="breakdance"
+   text-time="2005-11-17T01:18:53.000000Z"
+   committed-date="2005-11-22T14:55:23.328389Z"
+   checksum="b60c9b3bbc5322e5e3fb4c33185b1de0"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:55:16.000000Z"/>
+<entry
+   committed-rev="15"
+   name="certdb2der"
+   text-time="2005-11-22T22:38:24.000000Z"
+   committed-date="2005-11-22T14:55:23.328389Z"
+   checksum="ea716b9970acd140fa28400f1e5b4361"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:55:16.000000Z"/>
+<entry
+   committed-rev="15"
+   name="exploit"
+   text-time="2005-11-21T20:39:49.000000Z"
+   committed-date="2005-11-22T14:55:23.328389Z"
+   checksum="2e3859ea05f7ae6d80c8c3fdeef009e6"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:55:16.000000Z"/>
+<entry
+   committed-rev="15"
+   name="certextract"
+   text-time="2005-11-18T19:21:25.000000Z"
+   committed-date="2005-11-22T14:55:23.328389Z"
+   checksum="91ef911a10fbece1b1cefd5ffa0fc6ad"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:55:16.000000Z"/>
+</wc-entries>

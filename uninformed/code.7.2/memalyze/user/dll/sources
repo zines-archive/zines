@@ -1,0 +1,10 @@
+TARGETNAME=memalyze
+TARGETPATH=.
+TARGETTYPE=DYNLINK
+TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib \
+	$(SDK_LIB_PATH)\ntdll.lib
+C_DEFINES=$(C_DEFINES)
+USE_MAPSYM=1
+USE_MSVCRT=1
+PRECOMPILED_INCLUDE=precomp.h
+SOURCES=alloc.c entry.c libdasm.c mirror.c monitor.c segment.c

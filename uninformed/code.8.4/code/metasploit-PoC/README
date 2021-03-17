@@ -1,0 +1,11 @@
+This is a PoC for the Apple Atheros vulnerability written in Ruby for the Metasploit
+project. It requires a working copy of LORCON, it can also be used with the BackTrack
+(http://www.remote-exploit.org/backtrack.html) Live auditing CD. Drop this script in
+<metasploit home>/modules/auxiliary/dos/wireless then run msfconnsole and it should
+be available. 
+
+In the PoC the only information needed is the loading address of the AirPortAtheros5424
+kext. Since the Kext's often reload at the same address, you should only have to find
+this offset once. For instance, the default is set to 0x8e7000, which 99 times out of
+100 is hte address the test Macbook will load the driver at. Once you have found the offset
+with kextstat, convert it to decimal and use that value to set the KEXT_OFF option.

@@ -1,0 +1,81 @@
+DialogBoxes:
+
+DialogBoxParamA
+GetDlgItem
+GetDlgItemInt
+GetDlgItemTextA
+GetWindowTextA
+GetWindowWord
+
+MessageBoxes:
+
+MessageBeep
+MessageBoxA
+MessageBoxExA
+SendMessageA
+SendDlgItemMessageA
+ 
+
+Registry Access:
+
+RegCreateKeyA
+RegDeleteKeyA
+RegQueryValueA
+RegQueryValueExA
+RegCloseKeyA
+RegOpenKeyA
+
+Reading/Writing files:
+
+ReadFile
+WriteFile
+CreateFileA
+
+Reading data from INI file:
+
+GetPrivateProfileStringA
+GetPrivateProfileIntA
+WritePrivateProfileStringA
+
+Reading data (other) :
+
+LoadStringA
+lstrcmpA
+MultiByteToWideChar
+WideCharToMultiByte
+wsprintfA
+
+Time And Date:
+
+GetFileTime
+GetLocalTime
+GetSystemTime
+GetSystemTimeAsFileTime
+SetTimer
+SystemTimeToFileTime
+
+Creating a NAG-window:
+
+CreateWindowExA
+ShowWindow
+UpdateWindow
+
+Find messageboxtext :
+
+SendDlgItemMessageA
+SendMessageA
+SetDlgItemTextA
+SetWindowTextA
+
+Basic registration scheme:
+
+GetdlgItemTextA
+GetWindowTextA
+lstrcmpA
+GetPrivateProfileStringA
+GetPrivateProfileIntA
+RegQueryValueExA
+WritePrivateProfileStringA
+WritePrivateProfileIntA
+
+

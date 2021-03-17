@@ -1,0 +1,8 @@
+EXPORTS
+
+	PgBreakOnPatchGuard
+	PgPatchGuardDpcRoutine
+	PgCSpecificHandler
+	PgRealDpcRoutineReturnAddress
+	PgCSpecificHandlerRsp
+	PgPatchGuardCount

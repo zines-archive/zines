@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="15"
+   name=""
+   committed-date="2005-11-22T14:55:23.328389Z"
+   url="svn://127.0.0.1/srv/svn/repositories/random/certlib"
+   last-author="xbud"
+   kind="dir"
+   revision="15"/>
+<entry
+   committed-rev="16"
+   name="badcertdb.dat"
+   text-time="2005-11-17T07:41:22.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="3b884a156661884a315408ee5291daa1"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:56:34.000000Z"
+   revision="16"/>
+<entry
+   committed-rev="16"
+   name="2badcertdb.dat"
+   text-time="2005-11-18T21:20:08.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="79529b40f6db0c3781c4900bd802681c"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:56:34.000000Z"
+   revision="16"/>
+<entry
+   name="safelib"
+   kind="dir"/>
+<entry
+   name="notsafelib"
+   kind="dir"/>
+<entry
+   name="bin"
+   kind="dir"/>
+<entry
+   name="reqs"
+   kind="dir"/>
+<entry
+   committed-rev="16"
+   name="exploit.dat"
+   text-time="2005-11-16T06:54:27.000000Z"
+   committed-date="2005-11-22T14:56:34.089670Z"
+   checksum="dd43c438726099efdfd6dd142b3dfca4"
+   last-author="xbud"
+   kind="file"
+   prop-time="2005-11-22T22:56:34.000000Z"
+   revision="16"/>
+</wc-entries>

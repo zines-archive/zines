@@ -1,0 +1,22 @@
+TARGETNAME=relocfuzz
+TARGETPATH=.
+TARGETTYPE=PROGRAM
+
+USE_NATIVE_EH=1
+
+C_DEFINES=$(C_DEFINES)
+
+INCLUDES = $INCLUDES;..\..\lib
+
+TARGETLIBS=$(SDK_LIB_PATH)\kernel32.lib \
+				$(SDK_LIB_PATH)\ws2_32.lib \
+           $(SDK_LIB_PATH)\shlwapi.lib \
+			  ..\..\lib\i386\peapi.lib
+
+UMTYPE=console
+386_STDCALL=0
+
+USE_MAPSYM=1
+SOURCES=relocfuzz.c
+
+        

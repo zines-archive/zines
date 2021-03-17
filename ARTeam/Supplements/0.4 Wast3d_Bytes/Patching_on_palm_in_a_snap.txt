@@ -1,0 +1,45 @@
+1. load a program on the palm, run it and see what kind of nags it had and how the registration routine worked.
+
+2. run rsrcedit, open the app, and look for the tFRM and/or Talt that was associated with the registration process if there is one. I.E. Talt = "Thank you for registering!".
+
+Some apps have info screens with labels that change on successful registration or whatnot and they are a bit harder to patch this way.
+
+3. write down the ID for them (like say 1003 for a Talt).
+
+4. open the code segments in rsrcedit ( code 1, code 2 etc), clicked on the "Disasm" button so you can see the assembly, then click on the menu silk button and select "Save to DOC db...". itll let you name it and then itll dump the asm into a palmdoc file.
+
+5. Exit rsrcedit
+
+6. Run TealDoc or any other PalmDOC reader that has a search funtion. and then open the asm dump. it usually labels them something like "*app name**code segment number*.asm *HexiCalcCode1.asm*
+
+7. Do a search for the Talt or tFRM ID. You will probably get several results. if its a tFRM then theres generally a 'systrap' right below the search result.
+
+8. Write down the offset's that the results are found at.
+
+9. Open Code68dis. then open the program and then the code segment you were looking at. scroll down till you find the offset and check and see what kind of systrap is below the result. if its a sysTrapFrmGotoForm or if you see any sysTrapStrCaselessCompare/sysTrapStrCompare
+then you are on the right track most likely.
+
+10. You can then use logic by looking at the code above the systrap call and seeing what it does determine if this is the right spot or not. Usually some move.X's with beq/bra/bne/ etcs and some tst's.
+
+** oh, always make a duplicate of the file you are patching via rsrcedit's dupe function. that way if you screw up you can just delete the patched file and dupe the erm dupe.. and try again :)**
+
+11. If you think you've found the right branch to edit, run rsrcedit again and load the files, load the code segment, click on the disasm button again and in the search field at the bottom of the screen type in the offset and click on "goto". once it takes you to the correct location, click on "done" and you will be back in the hex view, the opcode that you want to edit is generally on the top row. you will see it. just change it to the bra/nOP/whatever that you need.
+
+12. Click on "ok". then in the next window click on "apply" and exit rsrcedit.
+
+13. go run the app. with any luck itll (A), be registered, (B), let you register with anything and ©, won't crash on startup :)
+
+Always make sure you have a backup on your pc or on an sd card. I'd hard reset my palm a few times doing this :) Buts always a load of fun to be able to load a couple of unpatched apps on your palm and patch while on the road or what not.
+
+The apps I use for doing this are.
+
+1. Quartus RsrsEdit
+2. Code68Dis - I use it mainly because it actually tells you what the systrap's names are unlike RsrcEdit....
+3. TealDoc - to view the ASM Dumps and I just like it more than anything else.
+4. HexiCalc - If Iever need to do conversion between hex and dec.
+5. Backupman - Creating backups to my sd card for safety..
+6. a DA launcher and that DA notepad that ive forgotten the name of.. - its nice to click on the silkpad and have a notepad to popup that i can write down offsets and such in.
+
+It's a run about way of patching but once you get the hang of it its actually quite easy and fast. I patched hexicalc today for the first time in about 2 minutes doing this.
+
+oh, and this really only work easily with apps that have a simplish reg routine. other apps can take a bit longer to figure out.

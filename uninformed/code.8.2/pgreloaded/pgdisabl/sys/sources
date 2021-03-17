@@ -1,0 +1,12 @@
+TARGETNAME=pgdisabl
+TARGETTYPE=EXPORT_DRIVER
+DLLDEF=pgdisabl.def
+
+SOURCES=pgdisabl.c \
+        pgsubvrt.c \
+        asmfuncs.asm \
+        pgdisabl.rc
+
+TARGETLIBS=$(DDK_LIB_PATH)\Aux_klib.lib
+
+USER_C_FLAGS = $(USER_C_FLAGS) /WX
